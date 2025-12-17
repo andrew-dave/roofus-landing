@@ -81,10 +81,10 @@ export function Planning() {
         <div className="mb-16">
           {/* Video frame with WebM support and poster */}
           <VideoFrame
-            src=""
+            src="/assets/planner-demo.mp4"
             webmSrc="/assets/planner-demo.webm"
             fallbackImage="/assets/planner-placeholder.svg"
-            poster="/assets/path_planning.png"
+            poster="/assets/planner-demo-poster.webp"
             className="aspect-video w-full max-w-5xl mx-auto"
             showControls={true}
           />

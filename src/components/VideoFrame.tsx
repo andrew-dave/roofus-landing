@@ -54,7 +54,7 @@ export function VideoFrame({
   useEffect(() => {
     if (!videoRef.current || hasError) return
     
-    if (isInView && isPlaying && !reducedMotion && !shouldReduce) {
+    if (isInView && isPlaying && !reducedMotion) {
       videoRef.current.play().catch(() => {
         // Autoplay was prevented, user interaction required
         setIsPlaying(false)
@@ -62,15 +62,15 @@ export function VideoFrame({
     } else {
       videoRef.current.pause()
     }
-  }, [isInView, isPlaying, hasError, reducedMotion, shouldReduce])
+  }, [isInView, isPlaying, hasError, reducedMotion])
 
   // Handle reduced motion: show poster instead
   useEffect(() => {
-    if ((reducedMotion || shouldReduce) && videoRef.current) {
+    if (reducedMotion && videoRef.current) {
       videoRef.current.pause()
       setIsPlaying(false)
     }
-  }, [reducedMotion, shouldReduce])
+  }, [reducedMotion])
 
   const togglePlay = () => {
     if (!videoRef.current) return
@@ -144,10 +144,11 @@ export function VideoFrame({
         <div className="relative">
           <video
             ref={videoRef}
+            autoPlay={isPlaying}
             muted={isMuted}
             loop
             playsInline
-            preload="metadata"
+            preload="auto"
             poster={poster}
             onLoadedData={handleLoadedData}
             onError={handleVideoError}
