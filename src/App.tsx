@@ -1,6 +1,7 @@
 import { Navbar } from './components'
 import { Hero, Specs, Planning, Robot3D, Deliverables, Contact } from './sections'
 import { PerfModeProvider } from './hooks'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
           <Deliverables />
           <Contact />
         </main>
+        
+        {/* Vercel Speed Insights */}
+        <SpeedInsights />
       </div>
     </PerfModeProvider>
   )
