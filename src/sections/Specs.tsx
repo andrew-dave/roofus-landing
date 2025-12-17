@@ -153,12 +153,15 @@ export function Specs() {
                     <div className="text-xs font-mono text-roofus-muted mb-3">{group.title}</div>
                     <div className="space-y-3">
                       {group.rows.map((row) => (
-                        <div key={row.key} className="grid grid-cols-[1fr_auto] gap-4 items-baseline">
+                        <div
+                          key={row.key}
+                          className="grid grid-cols-1 sm:grid-cols-[1fr_auto] gap-1.5 sm:gap-4 items-start sm:items-baseline"
+                        >
                           <div className="min-w-0">
                             <div className="text-xs font-mono text-roofus-muted">{row.key}</div>
                             {row.note && <div className="text-[11px] text-roofus-muted/80">{row.note}</div>}
                           </div>
-                          <div className="text-sm font-mono text-white text-right whitespace-nowrap">
+                          <div className="text-sm font-mono text-white text-left sm:text-right whitespace-normal sm:whitespace-nowrap break-words">
                             {row.value}
                           </div>
                         </div>
