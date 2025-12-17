@@ -24,10 +24,14 @@ export function Hero() {
               datasheet // rev 0.2
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-mono font-semibold tracking-tight text-white leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-mono font-semibold tracking-tight text-white leading-tight break-words">
               ROOFUS
               <span className="text-roofus-muted"> // </span>
-              roof_inspection_platform
+              <span className="block sm:inline">
+                roof_<wbr />
+                inspection_<wbr />
+                platform
+              </span>
             </h1>
 
             <p className="mt-4 text-roofus-muted max-w-xl">
