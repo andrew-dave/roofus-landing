@@ -1,0 +1,6 @@
+export { Hero } from './Hero'
+export { Specs } from './Specs'
+export { Planning } from './Planning'
+export { Robot3D } from './Robot3D'
+export { Deliverables } from './Deliverables'
+export { Contact } from './Contact'

@@ -1,0 +1,50 @@
+{
+  "name": "roofus-landing",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "optimize:glb": "gltf-transform optimize robot_input.glb public/assets/robot.glb --compress draco --texture-compress webp --texture-resize 2048",
+    "optimize:glb:full": "gltf-transform prune robot_input.glb - | gltf-transform dedup - - | gltf-transform webp - - --quality 80 | gltf-transform draco - public/assets/robot.glb",
+    "optimize:images": "node scripts/optimize-images.mjs",
+    "inspect:glb": "gltf-transform inspect public/assets/robot.glb",
+    "analyze": "npx vite-bundle-visualizer"
+  },
+  "dependencies": {
+    "@lumaai/luma-web": "^0.2.2",
+    "@react-three/drei": "9.92.7",
+    "@react-three/fiber": "8.15.12",
+    "clsx": "^2.1.0",
+    "framer-motion": "^10.18.0",
+    "lucide-react": "^0.303.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "scheduler": "0.23.0",
+    "three": "0.160.1"
+  },
+  "devDependencies": {
+    "@gltf-transform/cli": "^3.10.0",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@types/three": "0.160.0",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "postcss": "^8.4.32",
+    "sharp": "^0.33.1",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.2.2",
+    "vite": "^6.4.1"
+  },
+  "overrides": {
+    "scheduler": "0.23.0"
+  }
+}

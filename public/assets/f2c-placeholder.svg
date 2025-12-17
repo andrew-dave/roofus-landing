@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07080c"/>
+      <stop offset="1" stop-color="#0a0a0f"/>
+    </linearGradient>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M 80 0 L 0 0 0 80" fill="none" stroke="rgba(31,137,71,0.10)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <rect width="1200" height="675" fill="url(#grid)" opacity="0.55"/>
+  <circle cx="300" cy="40" r="320" fill="rgba(31,137,71,0.10)"/>
+  <circle cx="980" cy="120" r="260" fill="rgba(31,137,71,0.06)"/>
+
+  <g font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" fill="#e4e4e7">
+    <text x="70" y="120" font-size="34" font-weight="600">BDR mission planner</text>
+    <text x="70" y="165" font-size="18" fill="rgba(228,228,231,0.75)">mission planner UI placeholder</text>
+
+    <text x="70" y="240" font-size="16" fill="rgba(228,228,231,0.80)">input:</text>
+    <text x="150" y="240" font-size="16" fill="rgba(228,228,231,0.95)">boundary + obstacles</text>
+
+    <text x="70" y="275" font-size="16" fill="rgba(228,228,231,0.80)">compute:</text>
+    <text x="170" y="275" font-size="16" fill="rgba(228,228,231,0.95)">swaths + route</text>
+
+    <text x="70" y="310" font-size="16" fill="rgba(228,228,231,0.80)">output:</text>
+    <text x="150" y="310" font-size="16" fill="rgba(228,228,231,0.95)">waypoints</text>
+
+    <g fill="rgba(228,228,231,0.72)">
+      <text x="70" y="420" font-size="14">Drop a video into /public/assets and update the section:</text>
+      <text x="70" y="450" font-size="14" fill="#1f8947">planner-demo.webm</text>
+    </g>
+  </g>
+</svg>
+
+
